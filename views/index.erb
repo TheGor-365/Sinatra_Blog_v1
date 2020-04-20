@@ -6,5 +6,16 @@
   </head>
   <body>
     <h2>Latests posts:</h2>
+
+    <% @results.each do |post| %>
+      <p>
+        <%= post['content'] %>
+        <br>
+        <br>
+        <small>Added at:</small> <%= post['created_date'] %>
+      </p>
+      <hr/>
+    <% end %>
+
   </body>
 </html>
